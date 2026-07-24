@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Editar_documento.aspx.cs" Inherits="Lexus2._0.Expedientes.Editar_documento" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditaDocumento.aspx.cs" Inherits="Lexus2._0.Expedientes.EditaDocumento" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:HiddenField ID="hfIDDocto" runat="server" />

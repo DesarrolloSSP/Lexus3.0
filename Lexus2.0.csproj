@@ -222,11 +222,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Assents\Identidad_2018.png" />
     <Content Include="Assents\LEXUS.png" />
     <Content Include="Assents\user.png" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -241,18 +238,18 @@
     <Content Include="Datos\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model.Context.cs</LastGenOutput>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>edmLexus.edmx</DependentUpon>
     </Content>
     <Content Include="Datos\Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>edmLexus.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="Expedientes\captura_documento.aspx" />
-    <Content Include="Expedientes\Cap_Doc.aspx" />
+    <Content Include="Expedientes\CapturaDocumentos.aspx" />
     <Content Include="Expedientes\Consultas.aspx" />
-    <Content Include="Expedientes\Editar_documento.aspx" />
+    <Content Include="Expedientes\EditaDocumento.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -264,14 +261,14 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <EntityDeploy Include="Datos\Model.edmx">
+    <EntityDeploy Include="Datos\edmLexus.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>edmLexus.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Datos\Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
+    <Content Include="Datos\edmLexus.edmx.diagram">
+      <DependentUpon>edmLexus.edmx</DependentUpon>
     </Content>
-    <Content Include="Inicio\Inicio_sesion.aspx" />
+    <Content Include="Inicio\Login.aspx" />
     <Content Include="Inicio\Web.config" />
     <Content Include="Assents\Web.config" />
     <Content Include="Content\Web.config" />
@@ -305,7 +302,6 @@
     <Content Include="Content\source\Web.config" />
     <None Include="Datos\Auxiliares\.editorconfig" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Inicio\login.aspx" />
     <Content Include="Reportes\Infrome_de_documentos_recibidos.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -356,21 +352,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Datos\Auxiliares\AdminActuacion.cs" />
     <Compile Include="Datos\Auxiliares\AdminDocumentos.cs" />
     <Compile Include="Datos\Auxiliares\AdminOrganismos.cs" />
@@ -454,10 +436,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Datos\Model.Designer.cs">
+    <Compile Include="Datos\edmLexus.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>edmLexus.edmx</DependentUpon>
     </Compile>
     <Compile Include="Datos\sp_DetalleDocumentoExp_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -545,12 +527,12 @@
     <Compile Include="Expedientes\captura_documento.aspx.designer.cs">
       <DependentUpon>captura_documento.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Expedientes\Cap_Doc.aspx.cs">
-      <DependentUpon>Cap_Doc.aspx</DependentUpon>
+    <Compile Include="Expedientes\CapturaDocumentos.aspx.cs">
+      <DependentUpon>CapturaDocumentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Expedientes\Cap_Doc.aspx.designer.cs">
-      <DependentUpon>Cap_Doc.aspx</DependentUpon>
+    <Compile Include="Expedientes\CapturaDocumentos.aspx.designer.cs">
+      <DependentUpon>CapturaDocumentos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Expedientes\Consultas.aspx.cs">
       <DependentUpon>Consultas.aspx</DependentUpon>
@@ -559,29 +541,22 @@
     <Compile Include="Expedientes\Consultas.aspx.designer.cs">
       <DependentUpon>Consultas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Expedientes\Editar_documento.aspx.cs">
-      <DependentUpon>Editar_documento.aspx</DependentUpon>
+    <Compile Include="Expedientes\EditaDocumento.aspx.cs">
+      <DependentUpon>EditaDocumento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Expedientes\Editar_documento.aspx.designer.cs">
-      <DependentUpon>Editar_documento.aspx</DependentUpon>
+    <Compile Include="Expedientes\EditaDocumento.aspx.designer.cs">
+      <DependentUpon>EditaDocumento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\Inicio_sesion.aspx.cs">
-      <DependentUpon>Inicio_sesion.aspx</DependentUpon>
+    <Compile Include="Inicio\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Inicio\Inicio_sesion.aspx.designer.cs">
-      <DependentUpon>Inicio_sesion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inicio\login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="Inicio\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes\Infrome_de_documentos_recibidos.aspx.cs">

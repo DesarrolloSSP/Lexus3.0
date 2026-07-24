@@ -16,10 +16,8 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
-using System.Web.Management;
 using System.Web.Script.Services;
 using System.Web.Security;
 using System.Web.Services;
@@ -30,7 +28,7 @@ using ListItem = System.Web.UI.WebControls.ListItem;
 
 namespace Lexus2._0.Expedientes
 {
-    public partial class Editar_documento : System.Web.UI.Page
+    public partial class EditaDocumento : System.Web.UI.Page
     {
         int idDocto = 0;
         Guid GuididxpedienteEdit;
@@ -1039,12 +1037,7 @@ namespace Lexus2._0.Expedientes
                     ddlSubTipoAsunto.SelectedValue = "0";
                     divSubTipoAsuntoOtro.Visible = false;
                     txtFechaSubTipo.Text = "";
-                    txtOtroSubTipoAsunto.Text = "";
-                    //Label lblTextoAddInfoTipoAsunto = repInformacionTipoAsunto.Controls[repInformacionTipoAsunto.Controls.Count - 1].Controls[0].FindControl("lblTextoAddInfoTipoAsunto") as Label;
-                    //if (lblTextoAddInfoTipoAsunto != null)
-                    //{
-                    //    lblTextoAddInfoTipoAsunto.Text = $"AÑADIR INFORMACIÓN DE {ddlTipoAsunto.SelectedItem.Text.ToUpper()}";
-                    //}
+                    txtOtroSubTipoAsunto.Text = "";                    
                 }
                 else
                 {

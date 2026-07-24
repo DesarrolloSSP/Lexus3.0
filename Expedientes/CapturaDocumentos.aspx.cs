@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
+
 using System.Web.Script.Services;
 using System.Web.Security;
 using System.Web.Services;
@@ -14,7 +14,7 @@ using System.Web.UI.WebControls;
 
 namespace Lexus2._0.Expedientes
 {
-    public partial class Cap_Doc : System.Web.UI.Page
+    public partial class CapturaDocumentos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -11,7 +11,7 @@ namespace Lexus2._0.Inicio
 {
 
 
-    public partial class login
+    public partial class Login
     {
 
         /// <summary>
@@ -24,30 +24,12 @@ namespace Lexus2._0.Inicio
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control v.
+        /// Control LgPrincipal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager v;
-
-        /// <summary>
-        /// Control Login.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Login Login;
-
-        /// <summary>
-        /// Control lblMsj.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsj;
+        protected global::System.Web.UI.WebControls.Login LgPrincipal;
     }
 }

@@ -143,7 +143,7 @@ namespace Lexus2._0.Expedientes
             {
                 int idExpedActDocumento = Convert.ToInt32(e.CommandArgument.ToString());
                 Session["idDocumento"] = idExpedActDocumento;
-                Response.Redirect("~/Expedientes/Editar_documento.aspx");
+                Response.Redirect("~/Expedientes/EditaDocumento.aspx");
                 //Response.Redirect("~/Expedientes/DoctoEdicion.aspx");
 
             }

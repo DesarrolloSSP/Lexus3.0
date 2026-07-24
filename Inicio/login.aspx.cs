@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Lexus2._0.Inicio
 {
-    public partial class login : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         string sUsuarioActual;
         protected void Page_Load(object sender, EventArgs e)
@@ -16,21 +13,21 @@ namespace Lexus2._0.Inicio
 
         }
 
-        protected void Login_LoggedIn(object sender, EventArgs e)
+        protected void LgPrincipal_LoggedIn(object sender, EventArgs e)
         {
 
         }
 
-        protected void Login_Authenticate(object sender, AuthenticateEventArgs e)
+        protected void LgPrincipal_Authenticate(object sender, AuthenticateEventArgs e)
         {
             try
             {
-                MembershipUser usuario = Membership.GetUser(Login.UserName);
-                if (Membership.ValidateUser(Login.UserName, Login.Password))
+                MembershipUser usuario = Membership.GetUser(LgPrincipal.UserName);
+                if (Membership.ValidateUser(LgPrincipal.UserName, LgPrincipal.Password))
                 {
                     if (usuario.IsLockedOut)
                     {
-                        lblMsj.Text = "SE HA BLOQUADO EL USUARIO";
+                        //lblMsj.Text = "SE HA BLOQUADO EL USUARIO";
                     }
                     else
                     {
@@ -42,11 +39,11 @@ namespace Lexus2._0.Inicio
                 {
                     if (usuario != null && usuario.IsLockedOut)
                     {
-                        lblMsj.Text = "SE HA BLOQUEADO EL USUARIO DEBIDO AL MÁXIMO NÚMERO DE INTENTOS FALLIDOS, FAVOR DE CONTACTAR AL ADMINISTRADOR DEL SISTEMA AL TELÉFONO (228) 1-41-38-00 Ext. 8000";
+                        //lblMsj.Text = "SE HA BLOQUEADO EL USUARIO DEBIDO AL MÁXIMO NÚMERO DE INTENTOS FALLIDOS, FAVOR DE CONTACTAR AL ADMINISTRADOR DEL SISTEMA AL TELÉFONO (228) 1-41-38-00 Ext. 8000";
                     }
                     else
                     {
-                        lblMsj.Text = "ERROR DE USUARIO Y/O CONTRASEÑA";
+                        //lblMsj.Text = "ERROR DE USUARIO Y/O CONTRASEÑA";
                     }
                 }
             }
@@ -55,7 +52,6 @@ namespace Lexus2._0.Inicio
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "error", "error()", true);
 
             }
-
 
         }
     }

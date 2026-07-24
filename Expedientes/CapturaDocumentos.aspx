@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Captura documento" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cap_Doc.aspx.cs" Inherits="Lexus2._0.Expedientes.Cap_Doc" %>
+﻿<%@ Page Title="Captura documento" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CapturaDocumentos.aspx.cs" Inherits="Lexus2._0.Expedientes.CapturaDocumentos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <script src="<%= ResolveUrl("~/Scripts/jquery-ui-1.8.24.min.js") %>" type="text/javascript"></script>
     <link rel="stylesheet" href="<%= ResolveUrl("~/Content/jquery.ui.1.9.2.tooltip.css") %>" />

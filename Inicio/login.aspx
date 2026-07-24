@@ -1,93 +1,66 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Lexus2._0.Inicio.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Lexus2._0.Inicio.Login" %>
 
 <!DOCTYPE html>
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link runat="server" href="~/Content/login.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
     <title>Inicio de sesión</title>
-    <%--<script src="<%= ResolveUrl("~/Scripts/sweetalert2.all.js") %>" type="text/javascript"></script>--%>
-
-    <script type="text/javascript">
-        function error() {
-            swal({
-                title: "Error!",
-                text: "El usuario y la contraseña no son correctos",
-                icon: "error",
-                button: "Aceptar",
-
-            });
-            return false
-        }
-    </script>
-    <style>
-        #logo {
-            margin-left: 10px;
-        }
-
-        #logo2 {
-            margin-left: 10px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+     <link href="../Content/source/css/GeneralSSP.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-
-        <asp:ScriptManager runat="server" ID="v"></asp:ScriptManager>
-
         <div class="container">
-            <div class="row">
-                <div class="wrapper fadeInDown">
+            <div class="row justify-content-center align-items-center min-vh-100">
+                <div class="col-12 col-md-6 col-lg-5 card-login">
+                    <div class="shadow p-3 mb-5 bg-body-tertiary rounded fadeInDown">
+                        <div class="row">
 
-                    <asp:Login ID="Login" runat="server" OnLoggedIn="Login_LoggedIn" OnAuthenticate="Login_Authenticate">
-                        <LayoutTemplate>
-                            <div id="formContent">
-                                <br />
-                                <!-- Tabs Titles -->
-                                <!-- Icon -->
-                                <div class="fadeIn first">
-                                    <img src="~/Assents/LEXUS.png" style="display: block; width: 50%; margin: 10px auto;" runat="server"/>
+                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                <img src="../Assents/LEXUS.png" class="img-fluid" style="width: 15dvw !important" />
+                            </div>
 
-                                </div>
-                                <br />
+                            <div class="col-md-6 container text-center">
+                                <div class="row">
+                                    <h4 class="text-titulo">INICIAR SESIÓN</h4>
+                                    <asp:Login ID="LgPrincipal" runat="server" OnLoggedIn="LgPrincipal_LoggedIn" OnAuthenticate="LgPrincipal_Authenticate">
+                                        <LayoutTemplate>
+                                            <div class="input-group flex-nowrap p-2">
+                                                <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user icono-c"></i></span>
+                                                <asp:TextBox runat="server" ID="UserName" class="form-control etiquetas" placeholder="Usuario" required autocomplete="off"> </asp:TextBox>
+                                            </div>
 
+                                            <div class="input-group flex-nowrap p-2">
+                                                <span class="input-group-text" id="addon-wrapping2"><i class="fas fa-lock icono-c"></i></span>
+                                                <asp:TextBox runat="server" ID="Password" class="form-control etiquetas" placeholder="Contraseña" TextMode="Password" required autocomplete="off"> </asp:TextBox>
+                                            </div>
 
-                                <!-- Login Form -->
-                                <asp:TextBox runat="server" ID="UserName" class="fadeIn second" placeholder=" Usuario" required autocomplete="off"> </asp:TextBox>
-                                <br />
-                                <asp:TextBox runat="server" ID="Password" CssClass="fadeIn second" placeholder=" Contraseña" TextMode="Password" required autocomplete="off"></asp:TextBox>
-                                <br />
-                                <asp:Button ID="LoginButton" CommandName="Login" runat="server" class="login100-form-btn btn-success pt-4" ValidationGroup="Login1" Text="Inicio de sesi&#243;n" />
-
-                                <!-- Remind Passowrd -->
-
-                                <div id="formFooter">
-                                    <img class="avatar" src="~/Assents/Identidad_2018.png" runat="server" style="width: 100%" />
+                                            <asp:Button ID="LoginButton" CommandName="Login" runat="server" class=" btn col-11 mx-auto btn-principal" ValidationGroup="Login1" Text="Ingresar" />
+                                            <asp:Label ID="lblError" runat="server" Text="" Font-Bold="true" ForeColor="red" Visible="True"></asp:Label>
+                                        </LayoutTemplate>
+                                    </asp:Login>
                                 </div>
                             </div>
-                        </LayoutTemplate>
-                    </asp:Login>
-                    <div style="width: 100%; padding-top: 60px; text-align: center;">
-                        <asp:Label ID="lblMsj" runat="server" />
+
+
+                        </div>
+                    </div>
+                    <div class="text-center fadeInDown mt-3">
+                        <img class="avatar" src="~/Content/source/img/SSP_Convivencia.png" runat="server" style="width: 40%" />
                     </div>
                 </div>
             </div>
         </div>
-        <br />
-        <footer class="footer p-2  card" style="background-color: #AA983F;">
-            <div class="container-fluid float-md-start">
+        <footer class="footer card pt-2">
+            <div class="container-fluid">
                 <div class="row">
-                    <%--                    <div class=" col-sm-12 col-md-1">
-                        <img src="../Images/veracruz_orgullo.png" id="escudo" width="100%" />
-                    </div>--%>
-                    <div class="col-sm-12 col-md-12" style="color: white">
-                        <p class="align-self-center text-center">Se prohíbe la reproducción total o parcial contenida en este sistema informático sin el consentimiento expreso y por escrito de la Secretaría de Seguridad Pública de Estado de Veracruz. Esta plataforma digital deberá ser utilizada únicamente por el personal autorizado y debidamente certificado de esta Secretaría. Cualquier violación de la integridad del sistema será castigado severamente. </p>
+
+                    <div class="col-sm-12 col-md-12 footer-texto">
+                        <p class="align-self-center text-center">Se prohíbe la reproducción total o parcial contenida en este sistema informático sin el consentimiento expreso y por escrito de la Secretaría de Seguridad Pública del Estado de Veracruz. Esta plataforma digital deberá ser utilizada únicamente por el personal autorizado. El acceso no autorizado a sistemas informáticos es un delito grave. </p>
                         <p class="align-self-center text-center">
                             &copy; <%: DateTime.Now.Year %> - GOBIERNO DEL ESTADO DE VERACRUZ / SECRETARÍA DE SEGURIDAD PÚBLICA/ DERECHOS RESERVADOS.
                         </p>
@@ -99,6 +72,5 @@
             </div>
         </footer>
     </form>
-
 </body>
 </html>
