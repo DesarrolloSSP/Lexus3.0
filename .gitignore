@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+
+# NuGet
+packages/
+
+# Rider / ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# IIS Express
+*.dbmdl
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+Desktop.ini

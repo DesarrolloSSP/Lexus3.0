@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2ed8d84d30af4459a72769d5c3bd9d8b" Name="Diagram1" ZoomLevel="15">
+        <EntityTypeShape EntityType="BDJuridicoModel.tbExpedActuaciones" Width="1.5" PointX="0.75" PointY="5.875" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbExpedActPersonas" Width="1.5" PointX="3" PointY="7" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActPersonas_tbExpedActuaciones" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbArchivos" Width="1.5" PointX="3.375" PointY="1" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbExpedArchivos" Width="2.375" PointX="13.5" PointY="3.875" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedArchivos_tbArchivos" />
+        <EntityTypeShape EntityType="BDJuridicoModel.cat_EtiquetaTermino" Width="1.5" PointX="4.625" PointY="20" />
+        <EntityTypeShape EntityType="BDJuridicoModel.cat_Paises" Width="1.5" PointX="15" PointY="24.5" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catActuaciones" Width="1.5" PointX="0.75" PointY="12.375" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catDistritos" Width="1.5" PointX="6.875" PointY="25.375" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catEjercicios" Width="1.5" PointX="6.875" PointY="32.125" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catEstados" Width="1.5" PointX="4.625" PointY="25.5" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catFiguras" Width="1.5" PointX="10.125" PointY="21.25" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catHechos" Width="1.5" PointX="6.875" PointY="11.125" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catLocalidades" Width="1.5" PointX="4.625" PointY="28.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catMunicipios" Width="1.5" PointX="2.375" PointY="28.875" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catSTAOpciones" Width="1.5" PointX="12.25" PointY="16.25" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catSubTipoDeAsunto" Width="1.5" PointX="10" PointY="16.25" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catTerminos" Width="1.5" PointX="6.875" PointY="19.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catTipoDeDocumento" Width="1.5" PointX="0.75" PointY="18.5" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catTipoRecepcionDocumento" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catUbicacionFisica" Width="1.5" PointX="6.875" PointY="22.875" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbDatosDomicilios" Width="1.5" PointX="13.25" PointY="19.625" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbDatosSociales" Width="1.5" PointX="17.25" PointY="16.5" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbDomicilioAsunto" Width="1.5" PointX="6.875" PointY="28.5" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbEASTADOpciones" Width="1.5" PointX="14.5" PointY="16.125" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbExpedActExtraAsunto" Width="1.5" PointX="3" PointY="10.75" />
+        <AssociationConnector Association="BDJuridicoModel.FK_catTerminos_cat_EtiquetaTermino" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbDatosSociales_cat_Paises" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActuaciones_catActuaciones" />
+        <AssociationConnector Association="BDJuridicoModel.FK_catDistritos_catEstados" />
+        <AssociationConnector Association="BDJuridicoModel.FK_catMunicipios_catEstados" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActPersonas_catFiguras" />
+        <AssociationConnector Association="BDJuridicoModel.FK_catLocalidades_catMunicipios" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbDatosDomicilios_catLocalidades" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbDomicilioAsunto_catLocalidades" />
+        <AssociationConnector Association="BDJuridicoModel.FK_catSTAOpciones_catSubTipoDeAsunto" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbEASTADOpciones_catSTAOpciones" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActExtraAsunto_tbExpedActuaciones" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catTipoDeAsunto" Width="1.5" PointX="7.75" PointY="34.75" />
+        <AssociationConnector Association="BDJuridicoModel.FK_catSubTipoDeAsunto_catTipoDeAsunto" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActuaciones_catTipoDeAsunto" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catDelegaciones" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catDiasInhabiles" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.catGruposDePersonas" Width="1.5" PointX="5.375" PointY="0.875" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbOrganismos" Width="1.5" PointX="0.75" PointY="18.75" />
+        <AssociationConnector Association="BDJuridicoModel.FK_catTipoDeAsunto_tbOrganismos" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActuaciones_tbOrganismos" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActuaciones_tbOrganismos1" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActuaciones_tbOrgAreaJuridica" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActuaciones_tbOrgProcedencia" />
+        <EntityTypeShape EntityType="BDJuridicoModel.Historico" Width="1.5" PointX="19.625" PointY="8" />
+        <EntityTypeShape EntityType="BDJuridicoModel.HistoricoAcciones" Width="1.5" PointX="17.375" PointY="8.5" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbDatosLaborales" Width="1.5" PointX="9" PointY="15.5" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbDatosSistema" Width="1.5" PointX="6" PointY="15.375" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbExpedActDocumentos" Width="1.5" PointX="10.625" PointY="5.5" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbExpedActSTAsuntoDetalle" Width="1.5" PointX="15.25" PointY="10.875" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbExpedientes" Width="1.5" PointX="13" PointY="24.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbExpedPersonas" Width="1.5" PointX="18.375" PointY="11.875" />
+        <EntityTypeShape EntityType="BDJuridicoModel.tbPersonas" Width="1.5" PointX="0.75" PointY="13.125" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_catDistritos" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_catEjercicio" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedPersonas_catFiguras" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedPersonas_catGruposDePersonas" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_catHechos" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActSTAsuntoDetalle_catSubTipoDeAsunto" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_catTerminos" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_catTipoDeAsunto" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActDocumentos_catTipoDeDocumento" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActDocumentos_catTipoRecepcionDocumento" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_catUbicacionFisica" />
+        <AssociationConnector Association="BDJuridicoModel.FK_Historico_HistoricoAcciones" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActDocumentos_tbArchivos" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbDatosDomicilios_tbPersonas" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbDatosLaborales_tbOrganismos" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbDatosLaborales_tbPersonas" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbDatosSistema_tbOrganismos" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbDatosSistema_tbPersonas" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbDatosSociales_tbPersonas" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_tbDomicilioAsunto" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbEASTADOpciones_tbExpedActSTAsuntoDetalle" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActDocumentos_tbExpedActuaciones" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActPersonas_tbPersonas" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActSTAsuntoDetalle_tbExpedActuaciones" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedActuaciones_tbExpedientes" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedArchivos_tbExpedientes" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_tbOrganismos" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_tbOrganismos1" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedientes_tbOrganismosDest" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedPersonas_tbExpedientes" />
+        <AssociationConnector Association="BDJuridicoModel.FK_tbExpedPersonas_tbPersonas" />
+        <EntityTypeShape EntityType="BDJuridicoModel.vDetalleAsuntosExpediente" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.vDetalleDocumentos" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.vExpedientesResumido" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.vw_DetalleDocumentosExp" Width="1.5" PointX="11.75" PointY="10.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.vw_tcpersonal" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BDJuridicoModel.vw_UsuariosLexus" Width="1.5" PointX="9.75" PointY="0.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

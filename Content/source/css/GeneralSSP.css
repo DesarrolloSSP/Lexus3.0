@@ -1,0 +1,206 @@
+﻿* {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-family: var( --MinionPro-MediumIt:);
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "Gotham-Black";
+    src: url(../Content/Source/font/Gotham/Gotham-Black.ttf);
+}
+
+@font-face {
+    font-family: "Gotham-Bold";
+    src: url(../Content/Source/font/Gotham/Gotham-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Gotham-BlackItalic";
+    src: url(../Content/Source/font/Gotham/Gotham-BlackItalic.ttf)
+}
+
+
+@font-face {
+    font-family: "MinionPro-Black";
+    src: url(../Content/Source/font/MinionPro/MinionPro-BoldCn.ttf);
+}
+
+@font-face {
+    font-family: "MinionPro-Bold";
+    src: url(../Content/Source/font/MinionPro/MinionPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: "MinionPro-BlackItalic";
+    src: url(../Content/Source/font/MinionPro/MinionPro-BoltCnIt.ttf)
+}
+
+@font-face {
+    font-family: "MinionPro-MediumIt";
+    src: url(../Content/Source/font/MinionPro/MinionPro-MediumIt.ttf)
+}
+
+:root {
+    /*FONT FAMILY*/
+    /*Titulos*/
+    --Gotham-Black: "Gotham-Black", Gotham-Black;
+    --Gotham-Bold: "Gotham-Bold", Gotham-Bold;
+    --Gotham-BlackItalic: "Gotham-BlackItalic", Gotham-BlackItalic;
+    /*input, Sub-titulos, label*/
+    --MinionPro-Bold: "MinionPro-Bold", MinionPro-Bold;
+    --MinionPro-Black: "MinionPro-Black", MinionPro-Black;
+    --MinionPro-BlackItalic: "MinionPro-BlackItalic", MinionPro-BlackItalic;
+    --MinionPro-MediumIt: "MinionPro-MediumIt", MinionPro-MediumItc;
+    /*COLOR PRINCIPAL ES VINO*/
+    --color-principal: #7A1737;
+    --color-principa80: rgb(122,23,55, .8);
+    --color-principa60: rgb(122,23,55, .6);
+    --color-principa40: rgb(122,23,55, .4);
+    --color-principa20: rgb(122,23,55, .2);
+    /*COLOR SECUNDARIO ES ROJO*/
+    --color-secundario: #A8253C;
+    --color-secundario80: rgb(168,37,60, .8);
+    --color-secundario60: rgb(168,37,60, .6);
+    --color-secundario40: rgb(168,37,60, .4);
+    --color-secundario20: rgb(168,37,60, .2);
+    /*COLOR DORADO*/
+    --color-dorado: #B28854;
+    --color-dorad80: rgb(178,136,84, .8);
+    --color-dorad60: rgb(178,136,84, .6);
+    --color-dorado40: rgb(178,136,84, .4);
+    --color-dorad20: rgb(178,136,84, .2);
+    /*COLOR BAGE*/
+    --color-bage: #DAC195;
+    --color-bage80: rgb(218,193,149, .8);
+    --color-bage60: rgb(218,193,149, .6);
+    --color-bage40: rgb(218,193,149, .4);
+    --color-bage20: rgb(218,193,149, .2);
+    /*COLOR MELON*/
+    --color-melon: #EDD1AA;
+    --color-melon80: rgb(237,209,170, .8);
+    --color-melon60: rgb(237,209,170, .6);
+    --color-melon40: rgb(237,209,170, .4);
+    --color-melon20: rgb(237,209,170, .2);
+    /*COLOR GRAFITO*/
+    --color-grafito: #696968;
+    --color-grafito80: rgb(105,105,104, .8);
+    --color-grafito60: rgb(105,105,104, .6);
+    --color-grafito40: rgb(105,105,104, .4);
+    --color-grafito20: rgb(105,105,104, .2);
+    /*COLOR GRIS*/
+    --color-gris: #A8253C;
+    --color-gris80: rgb(192,192,192, .8);
+    --color-gris60: rgb(192,192,192, .6);
+    --color-gris40: rgb(192,192,192, .4);
+    --color-gris20: rgb(192,192,192, .2);
+}
+
+
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+/*LOGIN*/
+.card-login {
+    position: absolute;
+    top: 15% !important;
+    left: auto;
+    right: auto;
+}
+
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+/*FIN DEL LOGIN*/
+
+.text-titulo {
+    font-family: var(--Gotham-Black);
+    color: var(--color-principal)
+}
+
+.etiquetas {
+    font-family: var(--MinionPro-Bold) !important;
+    font-size: 1.2em !important;
+}
+
+
+.btn-principal {
+    font-family: var(--MinionPro-BlackItalic) !important;
+    color: white;
+    background-color: var(--color-principal)
+}
+
+    .btn-principal:hover {
+        color: white;
+        background-color: var( --color-dorado)
+    }
+
+.icono-c {
+    color: var( --color-dorado)
+}
+
+
+/*FOOTER*/
+.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 20%;
+    width: 100%;
+    background-color: var(--color-principal);
+}
+
+.footer-texto {
+    font-size: .9em !important;
+    font-family: var(--MinionPro-BlackItalic) !important;
+    color: white;
+}
+
+.logo-card {
+    /*width: 20dvw;*/
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+/*FIN FOOTER*/
