@@ -178,7 +178,6 @@
     </asp:Panel>
     <asp:Button ID="btn_dummy" runat="server" Style="display: none" />
 
-
     <asp:Button ID="btnDummy_SelecFechaTermino" runat="server" Style="display: none" />
     <ajaxToolkit:ModalPopupExtender ID="mpe_SelecFechaTermino" runat="server" TargetControlID="btnDummy_SelecFechaTermino"
         PopupControlID="pnl_SelecFechaTermino" BackgroundCssClass="modalBackground" DropShadow="true"
@@ -273,11 +272,7 @@
             </Triggers>
         </asp:UpdatePanel>
     </asp:Panel>
-
-
-
     <asp:HiddenField ID="hfIDTab" runat="server" />
-
     <section>
         <div class="d-flex align-items-start">
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">

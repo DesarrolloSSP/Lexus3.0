@@ -5,7 +5,8 @@ using System.Drawing;
 using System.Linq;
 using System.Web;
 
-//CLASE AUXILIAR PARA EL CONTROL Y FUNCIONAMIENTO DE LOS 'TÉRMINOS' O FECHAS Y HORAS LÍMITE EN QUE SE DEBE CONCLUIR UN EXPEDIENTE O ACCIÓN (CLASE AÚN EN DESARROLLO)
+///CLASE AUXILIAR PARA EL CONTROL Y FUNCIONAMIENTO DE LOS 'TÉRMINOS' O FECHAS Y HORAS LÍMITE EN QUE SE DEBE 
+///CONCLUIR UN EXPEDIENTE O ACCIÓN (CLASE AÚN EN DESARROLLO)
 namespace Lexus2_0.Datos.Auxiliares
 {
     public class AdminTermino
@@ -43,7 +44,8 @@ namespace Lexus2_0.Datos.Auxiliares
         };
 
         /// <summary>
-        /// Obtiene la fecha de término a partir de una fecha inicial, el tipo de término seleccionado y el tipo de día (natural-Se sumarán los días, laboral-no se considerarán festivos y sabado/domingo)
+        /// Obtiene la fecha de término a partir de una fecha inicial, el tipo de término seleccionado y el tipo de día 
+        /// (natural-Se sumarán los días, laboral-no se considerarán festivos y sabado/domingo)
         /// </summary>
         /// <param name="fechaInicial">La fecha inicial a la que se le 'sumarán' los días.</param>
         /// <param name="idTermino">El identificador del tipo de término</param>
@@ -123,7 +125,8 @@ namespace Lexus2_0.Datos.Auxiliares
             
         }
         /// <summary>
-        /// Verifica si la fecha es día festivo (del calendario del sistema) o es de fin de semana (sábado o domingo). De serlo, obtiene la siguiente fecha laboral. En caso de que no, devuelve la misma fecha ingresada.
+        /// Verifica si la fecha es día festivo (del calendario del sistema) o es de fin de semana (sábado o domingo). 
+        /// De serlo, obtiene la siguiente fecha laboral. En caso de que no, devuelve la misma fecha ingresada.
         /// </summary>
         /// <param name="fecha">Fecha en la cual iniciar</param>
         public DateTime fechaSinFestivoNiFinDeSemana(DateTime fecha)
@@ -154,7 +157,8 @@ namespace Lexus2_0.Datos.Auxiliares
             return fechaNueva;
         }
         /// <summary>
-        /// OBTIENE LOS DÍAS TOTALES CONTENIDOS ENTRE DOS FECHAS, CON LA CONDICIONANTE DE 'SUMAR' LOS FINES DE SEMANA, ES DECIR, EN VEZ DE TOMAR DÍAS NATURALES, SE CONSIDERAN ADEMÁS DÍAS FESTIVOS Y FINES DE SEMANA.
+        /// OBTIENE LOS DÍAS TOTALES CONTENIDOS ENTRE DOS FECHAS, CON LA CONDICIONANTE DE 'SUMAR' LOS FINES DE SEMANA, 
+        /// ES DECIR, EN VEZ DE TOMAR DÍAS NATURALES, SE CONSIDERAN ADEMÁS DÍAS FESTIVOS Y FINES DE SEMANA.
         /// </summary>
         /// <param name="fechaInicial">Fecha en la cual iniciar</param>
         /// <param name="fechaFinal">Fecha 'final' o de la cual tomar la diferencia</param>
@@ -175,7 +179,8 @@ namespace Lexus2_0.Datos.Auxiliares
             return dias;
         }
         /// <summary>
-        /// Obtiene la notificación en texto en relación a lo que falta de tiempo con respecto a la fecha de término, al igual que los colores de la misma
+        /// Obtiene la notificación en texto en relación a lo que falta de tiempo con respecto a la fecha de término, 
+        /// al igual que los colores de la misma
         /// </summary>
         /// <param name="fechaInicial">La fecha inicial (término)</param>
         /// <param name="fechaActual">La fecha con la que se comparará la fecha inicial</param>
@@ -183,9 +188,11 @@ namespace Lexus2_0.Datos.Auxiliares
         /// <param name="rojo">Variable donde se almacenará el color rojo (RGB)</param>
         /// <param name="verde">Variable donde se almacenará el color verde (RGB)</param>
         /// <param name="azul">Variable donde se almacenará el color azul (RGB)</param>
-        /// <param name="semaforo">Variable donde se almacenará el número del semáforo (-1 rojo, 0 amarillo y 1 verde)</param>
+        /// <param name="semaforo">Variable donde se almacenará el número del semáforo (-1 rojo, 
+        /// 0 amarillo y 1 verde)</param>
         /// <returns>
-        /// 2 - La diferencia fue en días, 1 - La diferencia fue en horas, 0 - Se pasó de tiempo, -1 el proceso no se llevó a cabo
+        /// 2 - La diferencia fue en días, 1 - La diferencia fue en horas, 0 - Se pasó de tiempo, 
+        /// -1 el proceso no se llevó a cabo
         /// </returns>
         public void obtenerTextoTiempoTermino(DateTime fechaInicial, out string mensaje, out int rojo, out int verde, out int azul, out int semaforo)
         {
@@ -281,7 +288,8 @@ namespace Lexus2_0.Datos.Auxiliares
             }
         }
         /// <summary>
-        /// Función simple que suma el límite de días para la respuesta del expediente cuando se selecciona que no se requiere una fecha de término.
+        /// Función simple que suma el límite de días para la respuesta del expediente cuando se selecciona
+        /// que no se requiere una fecha de término.
         /// </summary>
         /// <param name="fecha">La fecha de recepción del documento</param>
         /// <returns>
@@ -289,7 +297,8 @@ namespace Lexus2_0.Datos.Auxiliares
         /// </returns>
         public DateTime fechaSinTermino(DateTime fecha)
         {
-            //HASTA EL MOMENTO NO SE CONTEMPLA SI CAE O NO EN FIN DE SEMANA O FESTIVO. QUIZÁ TE VEA POR AQUÍ PARA IMPLEMENTARLO MÁS TEMPRANO QUE TARDE XD (03/03/17).
+            //HASTA EL MOMENTO NO SE CONTEMPLA SI CAE O NO EN FIN DE SEMANA O FESTIVO.
+            //QUIZÁ TE VEA POR AQUÍ PARA IMPLEMENTARLO MÁS TEMPRANO QUE TARDE XD (03/03/17).
             //fecha = fecha.AddDays(45);
             //BUENO, AL FINAL COMENTARON QUE SON DÍAS LABORALES...ASÍ QUE
             int numDias = diasConFinesDeSemana(fecha, fecha.AddDays(45));

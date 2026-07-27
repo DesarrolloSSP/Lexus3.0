@@ -12,7 +12,6 @@
             // Place here the first init of the autocomplete
             IniciarAutocompletes();
             funcionamientoTab();
-
         });
 
         function InitializeRequest(sender, args) {
@@ -22,7 +21,6 @@
         function EndRequest(sender, args) {
             IniciarAutocompletes();
             funcionamientoTab();
-
         }
 
         window.onbeforeunload = function (e) {
@@ -31,9 +29,6 @@
                 e.returnValue = alert('Estás por cerrar la página, cuidado!');
             }
         }
-
-
-
         function IniciarAutocompletes() {
             var TextViews = [
                 "txtOrgProcedencia", "txtDocPersonaRecibio", "txtPersonaRelacionada"
@@ -99,9 +94,9 @@
             if (document.getElementById('<%=hfIDTab.ClientID %>') != null)
                 document.getElementById('<%=hfIDTab.ClientID %>').value = idTab;
         }
+
         function cambioTabBoton(idTab) {
             console.log('EJECUTANDO - cambioTabBoton');
-
             if (document.getElementById('<%=hfIDTab.ClientID %>') != null) {
                 let idPrevio = document.getElementById('<%=hfIDTab.ClientID %>').value;
                 $("[id$='li" + idPrevio + "']").removeClass('active');
@@ -110,7 +105,6 @@
                 $("[id$='li" + idTab + "']").addClass('active');
                 $("[id$='" + idTab + "']").addClass('tab-pane active');
             }
-
         }
 
         function myFunction() {
@@ -266,16 +260,12 @@
             </Triggers>
         </asp:UpdatePanel>
     </asp:Panel>
-
-
-
     <asp:HiddenField ID="hfIDTab" runat="server" />
     <section>
         <div class="d-flex align-items-start">
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <button class="nav-link active pb-4 mb-5 p-3 shadow-lg rounded" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">I. DETALLE DE LA PROCEDENCIA</button>
                 <button class="nav-link pb-4 mb-5 p-3 shadow-lg rounded" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">II. DATOS DEL DOCUMENTO</button>
-
             </div>
             <div class="tab-content card  shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="v-pills-tabContent" style="border-radius: 10px; border-left: 8px #007bff solid !important; border-right: none; border-top: none; border-bottom: none">
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
@@ -314,7 +304,6 @@
                                         autocomplete="off" TextMode="MultiLine" Height="8em"></asp:TextBox>
                                     <asp:HiddenField ID="hfidOrgProced" runat="server" />
                                 </div>
-
                                 <div id="divProcedenciaDDH" runat="server" visible="false">
                                     <asp:Label ID="Label3" runat="server" Font-Size="0.8em" Text="PROCEDENCIA" AssociatedControlID="ddlAreasDDH"></asp:Label><span class="campoRequerido">*</span><br />
                                     <asp:DropDownList ID="ddlAreasDDH" runat="server" DataSourceID="edsOrgsProcDDH" DataTextField="nombre" DataValueField="id" CssClass="form-select"

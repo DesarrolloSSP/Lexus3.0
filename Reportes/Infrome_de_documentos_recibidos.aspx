@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="Informe de documentos recibido" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Infrome_de_documentos_recibidos.aspx.cs" Inherits="Lexus2._0.Reportes.Infrome_de_documentos_recibidos" %>
-
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <script src="<%= ResolveUrl("~/Scripts/jquery-ui-1.8.24.min.js") %>" type="text/javascript"></script>
     <script type="text/javascript">
@@ -54,13 +52,10 @@
                         <asp:Button runat="server" ID="btnBuscar" CssClass="btn btn-primary" Text="Buscar" OnClick="btnBuscar_Click" />
                     </div>
                 </div>
-
             </div>
             <br />
         </div>
     </div>
-
-
     <br />
     <div id="ReportePdf" runat="server" visible="false">
         <div class="container ">
@@ -88,7 +83,6 @@
                     </div>
                 </ContentTemplate>
             </asp:UpdatePanel>
-
         </div>
     </div>
 </asp:Content>

@@ -11,6 +11,8 @@ using System.Web.Security;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web;
+
 
 namespace Lexus2._0.Expedientes
 {
@@ -23,6 +25,7 @@ namespace Lexus2._0.Expedientes
                 PrepararNuevoDocumento();
                 divSubarea.Visible = false;
             }
+          //  throw new HttpException(403, "Prueba de acceso denegado forzada");
         }
 
         #region SECCIÓN DEFAULT ==================================================
@@ -55,7 +58,6 @@ namespace Lexus2._0.Expedientes
             divProcedenciaDDH.Visible = idAreaPersona == idDDH;
             divProcedenciaTodos.Visible = idAreaPersona != idDDH && idAreaPersona != 0;
             ddlAreasDDH.ClearSelection();
-
             DefaultPersonas();
             DefaultFechaHora();
         }
@@ -204,7 +206,6 @@ namespace Lexus2._0.Expedientes
                 return null;
             }
         }
-
 
         #endregion
         #region SECCIÓN - DETALLE PROCEDENCIA ===========================================

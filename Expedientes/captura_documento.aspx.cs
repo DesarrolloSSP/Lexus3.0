@@ -34,6 +34,7 @@ namespace Lexus2._0.Expedientes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           // throw new HttpException(403, "Prueba de acceso denegado forzada");
             if (!IsPostBack)
             {
                 PrepararNuevoDocumento();
@@ -218,7 +219,6 @@ namespace Lexus2._0.Expedientes
                 return null;
             }
         }
-
 
         #endregion
         #region SECCIÓN - DETALLE PROCEDENCIA ===========================================

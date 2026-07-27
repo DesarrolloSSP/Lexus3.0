@@ -132,7 +132,7 @@ namespace Lexus2_0.Datos.Auxiliares
             string mensaje = "";
             if (userName.Equals("GUARDIA"))
             {
-                //ES IMPOSIBLE POR EL MOMENTO SABER QUIÉN USÓ LA CUENTA DE LA GUARDIA A MENOS QUE SE CRUCE INFORMACIÓN CON EL ÁREA SOBRE QUIENES TUVIERON GUARDIAS
+                //ES IMPOSIBLE POR EL MOMENTO SABER QUIÉN USÓ LA CUENTA DE LA GUARDIA A MENOS QUE SE CRUCE INFORMACIÓN CON EL ÁREA SOBRE QUIENES TUVIERON GUARDIAS????
                 mensaje = "[" + userName + "]";
             }
             else

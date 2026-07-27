@@ -6,6 +6,9 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using Lexus2._0.Clases; 
+
+
 
 namespace Lexus2._0
 {
@@ -13,9 +16,35 @@ namespace Lexus2._0
     {
         void Application_Start(object sender, EventArgs e)
         {
-            // Código que se ejecuta al iniciar la aplicación
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            Exception rawEx = Server.GetLastError();
+            Exception ex = rawEx.GetBaseException();
+            Server.ClearError();
+            ErrorL.Registrar(ex);   /// PROCESO para registrar los errores 
+            if (ex is HttpException httpEx)
+            {
+                int statusCode = httpEx.GetHttpCode();
+                switch (statusCode)
+                {
+                    case 403:
+                        Response.Redirect("~/Error/Error403.aspx", true);
+                        Context.ApplicationInstance.CompleteRequest();
+                        return; 
+                    case 404:
+                        Response.Redirect("~/Error/Error404.aspx", false);
+                        Context.ApplicationInstance.CompleteRequest();
+                        return; 
+                }
+            }
+            Response.Redirect("~/Error/Error500.aspx", false);
+            Context.ApplicationInstance.CompleteRequest();
+        }
+
     }
+
 }

@@ -27,7 +27,7 @@ namespace Lexus2._0.Inicio
                 {
                     if (usuario.IsLockedOut)
                     {
-                        //lblMsj.Text = "SE HA BLOQUADO EL USUARIO";
+                        //lblMsj.Text = "SE HA BLOQUEADO EL USUARIO";
                     }
                     else
                     {
