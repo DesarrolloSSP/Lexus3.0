@@ -852,15 +852,6 @@ namespace Lexus2._0.Expedientes
         protected global::System.Web.UI.WebControls.HiddenField hfFechaLimiteTerm;
 
         /// <summary>
-        /// Control upSeccion_FechaTermino.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upSeccion_FechaTermino;
-
-        /// <summary>
         /// Control upFinalizacion.
         /// </summary>
         /// <remarks>
